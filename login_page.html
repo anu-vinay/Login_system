@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      emailjs.init("lnvWOdHWz-2SxCZB7"); 
+    })();
+  </script>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+
+    <input type="text" class="loginInput" placeholder="Email or Phone">
+    <button onclick="sendLoginOTP()">Send OTP</button>
+
+    <input type="text" id="loginOTP" placeholder="Enter OTP">
+    <button onclick="verifyLoginOTP()">Verify</button>
+
+    <p id="loginMsg"></p>
+  </div>
+  <script src="login.js"></script>
+
+</body>
+</html>

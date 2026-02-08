@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("lnvWOdHWz-2SxCZB7");
+    })();
+  </script>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h2>Register</h2>
+  <input type="text" id="userInput" placeholder="Email or Phone number">
+  <br><br>
+  <button onclick="sendOTP()">Send OTP</button>
+  <p id="locationText"></p>
+  <input type="text" id="otpInput" placeholder="Enter OTP">
+  <button id="resendBtn" onclick="resendOTP()" disabled>
+  Resend OTP
+</button>
+
+<p id="timerText"></p>
+
+  <br><br>
+  <button onclick="verifyOTP()">Verify OTP</button>
+  <p id="message" class="status-msg"></p>
+  <script src="script.js"></script>
+  <div class="already-box">
+  <p>Already registered?</p>
+  <a href="login_page.html">
+    <button class="login-btn">Login</button>
+  </a>
+</div>
+</body>
+</html>
